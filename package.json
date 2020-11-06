@@ -1,5 +1,5 @@
 {
-  "name": "express-boilerplate",
+  "name": "noteful-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "migrate:test": "env NODE_ENV=test npm run migrate"
   },
   "keywords": [],
-  "author": "",
+  "author": "Courtney",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
@@ -21,9 +21,10 @@
     "express": "^4.17.1",
     "helmet": "^4.1.1",
     "knex": "^0.21.12",
-    "migrate": "^1.7.0",
     "morgan": "^1.10.0",
-    "postgrator-cli": "^3.2.0"
+    "pg": "^8.4.2",
+    "postgrator-cli": "^3.2.0",
+    "xss": "^1.0.8"
   },
   "devDependencies": {
     "chai": "^4.2.0",

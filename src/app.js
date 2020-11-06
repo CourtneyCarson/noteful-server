@@ -4,8 +4,8 @@ const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
-const notesRouter = require("../router/notes-router.js");
-const foldersRouter = require("../router/folders-router");
+const notesRouter = require("../notes/notes-router");
+const foldersRouter = require("../folders/folder-router");
 
 
 const app = express()

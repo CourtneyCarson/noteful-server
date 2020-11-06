@@ -1,0 +1,5 @@
+ALTER TABLE notes
+  DROP COLUMN folders;
+
+DROP TABLE IF EXISTS folders CASCADE;
+DROP TABLE IF EXISTS notes; 

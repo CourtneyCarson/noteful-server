@@ -8,7 +8,6 @@ const notesRouter = require("../router/notes-router.js");
 const foldersRouter = require("../router/folders-router");
 
 
-
 const app = express()
 
 const morganOption = (NODE_ENV === 'production')

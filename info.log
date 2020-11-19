@@ -1,3 +1,7 @@
 {"message":"Unauthorized request to path: /api/notes","level":"error"}
 {"message":"Unauthorized request to path: /api/folders","level":"error"}
 {"message":"Unauthorized request to path: /api/folders","level":"error"}
+{"message":"Unauthorized request to path: /api/folders","level":"error"}
+{"message":"insert into \"folders\" (\"name\") values ($1) returning * - column \"name\" of relation \"folders\" does not exist","level":"error"}
+{"message":"Unauthorized request to path: /api/folders","level":"error"}
+{"message":"Unauthorized request to path: /api/folders","level":"error"}

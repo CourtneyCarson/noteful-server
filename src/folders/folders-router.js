@@ -9,7 +9,7 @@ const jsonParser = express.json();
 
 const serializeFolder = (folder) => ({
 	id: folder.id,
-	name: xss(folder.name),
+	folder_name: xss(folder.folder_name),
 });
 
 foldersRouter
@@ -23,8 +23,8 @@ foldersRouter
 			.catch(next);
 	})
 	.post(jsonParser, (req, res, next) => {
-		const { name } = req.body;
-		const newFolder = { name };
+		const { folder_name } = req.body;
+		const newFolder = { folder_name };
 
 		for (const [key, value] of Object.entries(newFolder))
 			if (value == null)
@@ -67,14 +67,14 @@ foldersRouter
 			.catch(next);
 	})
 	.patch(jsonParser, (req, res, next) => {
-		const { name } = req.body;
-		const folderToUpdate = { name };
+		const { folder_name } = req.body;
+		const folderToUpdate = { folder_name };
 
 		const numberOfValues = Object.values(folderToUpdate).filter(Boolean).length;
 		if (numberOfValues === 0)
 			return res.status(400).json({
 				error: {
-					message: `Request body must contain 'name'`,
+					message: `Request body must contain 'folder_name'`,
 				},
 			});
 

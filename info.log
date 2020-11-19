@@ -21,3 +21,6 @@
 {"message":"insert into \"notes\" (\"content\", \"folder\", \"modified\", \"note_name\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"notes_pkey\"","level":"error"}
 {"message":"Unauthorized request to path: /api/notes","level":"error"}
 {"message":"Note with id 4 created.","level":"info"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"Unauthorized request to path: /api/folders","level":"error"}
+{"message":"Unauthorized request to path: /api/folders","level":"error"}

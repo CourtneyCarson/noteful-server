@@ -5,3 +5,19 @@
 {"message":"insert into \"folders\" (\"name\") values ($1) returning * - column \"name\" of relation \"folders\" does not exist","level":"error"}
 {"message":"Unauthorized request to path: /api/folders","level":"error"}
 {"message":"Unauthorized request to path: /api/folders","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"name is required","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"folder_id is required","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"modified\", \"note_name\") values ($1, $2, $3, $4) returning * - invalid input syntax for type integer: \"name\"","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"modified\", \"note_name\") values ($1, $2, $3, $4) returning * - invalid input syntax for type timestamp: \"date\"","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"modified\", \"note_name\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"notes_pkey\"","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"modified\", \"note_name\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"notes_pkey\"","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"insert into \"notes\" (\"content\", \"folder\", \"modified\", \"note_name\") values ($1, $2, $3, $4) returning * - duplicate key value violates unique constraint \"notes_pkey\"","level":"error"}
+{"message":"Unauthorized request to path: /api/notes","level":"error"}
+{"message":"Note with id 4 created.","level":"info"}

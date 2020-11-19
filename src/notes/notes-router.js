@@ -9,10 +9,10 @@ const bodyParser = express.json();
 
 const serializeNote = (note) => ({
 	id: note.id,
-	name: xss(note.name),
+	note_name: xss(note.note_name),
 	modified: note.modified,
 	content: xss(note.content),
-	folder_id: note.folder_id,
+	folder: note.folder,
 });
 
 notesRouter
@@ -25,15 +25,15 @@ notesRouter
 			.catch(next);
 	})
 	.post(bodyParser, (req, res, next) => {
-		for (const field of ["name", "modified", "folder_id", "content"]) {
+		for (const field of ["note_name", "modified", "folder", "content"]) {
 			if (!req.body[field]) {
 				logger.error(`${field} is required`);
 				return res.status(400).send(`'${field}' is required`);
 			}
 		}
 
-		const { name, modified, folder_id, content } = req.body;
-		const newNote = { name, modified, folder_id, content };
+		const { note_name, modified, folder, content } = req.body;
+		const newNote = { note_name, modified, folder, content };
 
 		NotesService.insertNote(req.app.get("db"), newNote)
 			.then((note) => {
